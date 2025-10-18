@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Photography For You - Best Photography Store For Products. Shop latest gear at best prices with fast shipping.">
     <meta name="keywords" content="photography, camera, gear, equipment, store">
     <meta name="author" content="Photography For You">
@@ -92,37 +100,45 @@
         }
         
         .feature-card {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: rgba(0, 0, 0, 0.2);
         }
         
         .btn-primary {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .btn-primary:hover {
             transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.98);
         }
         
         .btn-secondary {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .btn-secondary:hover {
             transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         
         .testimonial-card {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .testimonial-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: rgba(0, 0, 0, 0.2);
         }
         
         .sticky-header {
@@ -131,11 +147,13 @@
             z-index: 40;
             background-color: white;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
         }
         
         .announcement-bar {
             background: linear-gradient(90deg, #1f2937 0%, #374151 100%);
             color: white;
+            transition: all 0.3s ease-in-out;
         }
         
         .search-input {
@@ -144,6 +162,79 @@
         
         .search-input:focus {
             box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.3s ease-in-out;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        
+        .footer-link {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .footer-link:hover {
+            transform: translateX(4px);
+        }
+        
+        .cta-button {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .benefit-image {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .benefit-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
@@ -157,10 +248,10 @@
     <header class="sticky-header">
         <nav class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4 flex items-center justify-between">
             <!-- Logo -->
-            <div class="flex items-center space-x-2">
+            <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d" class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
                 <i class="fas fa-camera text-2xl text-gray-900"></i>
                 <span class="text-xl md:text-2xl font-bold text-gray-900">Photography</span>
-            </div>
+            </a>
 
             <!-- Search Bar - Hidden on Mobile -->
             <div class="hidden md:flex flex-1 mx-8 items-center bg-gray-100 rounded-lg px-4 py-2">
@@ -174,11 +265,12 @@
             </div>
 
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#features" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">Shop</a>
-                <a href="#benefits" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">About</a>
-                <a href="#faq" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">FAQ</a>
-                <a href="mailto:admin@pru.com" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">Contact</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="nav-link text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">Shop</a>
+                <a href="#benefits" class="nav-link text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">About</a>
+                <a href="#about-us" class="nav-link text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">Our Story</a>
+                <a href="#faq" class="nav-link text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">FAQ</a>
+                <a href="mailto:admin@pru.com" class="nav-link text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">Contact</a>
             </div>
 
             <!-- CTA Button -->
@@ -187,18 +279,19 @@
             </a>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-gray-900 text-2xl" aria-label="Toggle menu" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-button md:hidden text-gray-900 text-2xl hover:text-gray-700 transition-colors duration-300" aria-label="Toggle menu">
+                <i class="fas fa-bars text-2xl"></i>
             </button>
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 py-4 px-4 space-y-3">
-            <a href="#features" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2">Shop</a>
-            <a href="#benefits" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2">About</a>
-            <a href="#faq" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2">FAQ</a>
-            <a href="mailto:admin@pru.com" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2">Contact</a>
-            <a href="https://pru.com" class="btn-primary block bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 text-center">
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200 py-4 px-4 space-y-3">
+            <a href="#features" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2 hover:bg-gray-50 px-3 rounded">Shop</a>
+            <a href="#benefits" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2 hover:bg-gray-50 px-3 rounded">About</a>
+            <a href="#about-us" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2 hover:bg-gray-50 px-3 rounded">Our Story</a>
+            <a href="#faq" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2 hover:bg-gray-50 px-3 rounded">FAQ</a>
+            <a href="mailto:admin@pru.com" class="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium py-2 hover:bg-gray-50 px-3 rounded">Contact</a>
+            <a href="https://pru.com" class="btn-primary block bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 text-center mt-4">
                 Buy Now
             </a>
         </div>
@@ -244,41 +337,41 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
                 <!-- Feature 1: Latest Gear -->
-                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 md:p-6 hover:border-gray-300">
-                    <div class="mb-6 text-4xl text-gray-900">
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 md:p-6">
+                    <div class="mb-6 text-4xl text-gray-900 transition-transform duration-300 hover:scale-110">
                         <i class="fas fa-camera"></i>
                     </div>
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                         Latest Gear
                     </h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Stay ahead with our constantly updated collection of the newest photography equipment from top brands worldwide.
+                        Stay ahead with our constantly updated collection of the newest photography equipment from top brands worldwide. We curate every product to ensure quality and innovation.
                     </p>
                 </div>
 
                 <!-- Feature 2: Best Price -->
-                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 md:p-6 hover:border-gray-300">
-                    <div class="mb-6 text-4xl text-gray-900">
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 md:p-6">
+                    <div class="mb-6 text-4xl text-gray-900 transition-transform duration-300 hover:scale-110">
                         <i class="fas fa-tag"></i>
                     </div>
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                         Best Price
                     </h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Competitive pricing without compromising on quality. We guarantee the best value for your photography investment.
+                        Competitive pricing without compromising on quality. We guarantee the best value for your photography investment with transparent pricing and no hidden fees.
                     </p>
                 </div>
 
                 <!-- Feature 3: Fast Shipping -->
-                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 md:p-6 hover:border-gray-300">
-                    <div class="mb-6 text-4xl text-gray-900">
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 md:p-6">
+                    <div class="mb-6 text-4xl text-gray-900 transition-transform duration-300 hover:scale-110">
                         <i class="fas fa-shipping-fast"></i>
                     </div>
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                         Fast Shipping
                     </h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Get your gear quickly with our expedited shipping. 5-day worldwide delivery ensures you're ready to shoot sooner.
+                        Get your gear quickly with our expedited shipping. 5-day worldwide delivery ensures you're ready to shoot sooner with real-time tracking on every order.
                     </p>
                 </div>
             </div>
@@ -295,20 +388,24 @@
                         Free Shipping
                     </h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-                        We believe in removing barriers to getting the photography gear you need. That's why we offer completely free shipping on all orders, no minimum purchase required.
+                        We believe in removing barriers to getting the photography gear you need. That's why we offer completely free shipping on all orders, with no minimum purchase required. Whether you're buying a single lens or a complete studio setup, we deliver it to your door at no extra cost. Our commitment to free shipping means you can shop with confidence, knowing the price you see is the price you pay.
                     </p>
                     <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>Free shipping on all orders</span>
+                            <span>Free shipping on all orders, no minimum</span>
                         </li>
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>No minimum purchase threshold</span>
+                            <span>Worldwide delivery to over 180 countries</span>
                         </li>
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>Worldwide delivery available</span>
+                            <span>Secure packaging to protect your gear</span>
+                        </li>
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
+                            <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
+                            <span>Real-time tracking on every shipment</span>
                         </li>
                     </ul>
                     <a 
@@ -324,7 +421,7 @@
                     <img 
                         src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
                         alt="Free shipping on photography gear"
-                        class="w-full h-auto rounded-xl shadow-lg object-cover"
+                        class="benefit-image w-full h-auto rounded-xl shadow-lg object-cover"
                     >
                 </div>
             </div>
@@ -340,7 +437,7 @@
                     <img 
                         src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
                         alt="Easy returns on photography products"
-                        class="w-full h-auto rounded-xl shadow-lg object-cover"
+                        class="benefit-image w-full h-auto rounded-xl shadow-lg object-cover"
                     >
                 </div>
 
@@ -350,20 +447,24 @@
                         Free Returns
                     </h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-                        Shop with complete confidence knowing that your satisfaction is our priority. If you're not completely happy with your purchase, we make returns easy and hassle-free.
+                        Shop with complete confidence knowing that your satisfaction is our priority. If you're not completely happy with your purchase, we make returns easy and hassle-free. With our 30-day return window, you have plenty of time to test your gear and make sure it meets your needs. We even cover return shipping costs, so there's absolutely no risk when you shop with us.
                     </p>
                     <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>100% satisfaction guarantee</span>
+                            <span>100% satisfaction guarantee on all products</span>
                         </li>
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>30-day return window</span>
+                            <span>Extended 30-day return window for peace of mind</span>
                         </li>
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>Full refund upon return</span>
+                            <span>Full refund upon return, no questions asked</span>
+                        </li>
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
+                            <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
+                            <span>We cover all return shipping costs</span>
                         </li>
                     </ul>
                     <a 
@@ -387,20 +488,24 @@
                         Earn Rewards Points
                     </h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-                        Join our loyalty program and earn points on every purchase. Accumulate rewards and redeem them for discounts, exclusive products, and special perks.
+                        Join our loyalty program and earn points on every purchase. Accumulate rewards and redeem them for discounts, exclusive products, and special perks. Our members enjoy exclusive access to limited edition gear, early bird sales, and special birthday discounts. The more you shop, the more you save, making every purchase a step toward your next great photography adventure.
                     </p>
                     <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>1 point per dollar spent</span>
+                            <span>Earn 1 point per dollar spent on all items</span>
                         </li>
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>Exclusive member-only deals</span>
+                            <span>Exclusive member-only deals and promotions</span>
                         </li>
-                        <li class="flex items-center text-gray-700">
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
                             <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
-                            <span>Early access to new products</span>
+                            <span>Early access to new product launches</span>
+                        </li>
+                        <li class="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300">
+                            <i class="fas fa-check text-gray-900 mr-3 font-bold"></i>
+                            <span>Birthday bonus points and special rewards</span>
                         </li>
                     </ul>
                     <a 
@@ -416,7 +521,7 @@
                     <img 
                         src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
                         alt="Earn loyalty points on photography purchases"
-                        class="w-full h-auto rounded-xl shadow-lg object-cover"
+                        class="benefit-image w-full h-auto rounded-xl shadow-lg object-cover"
                     >
                 </div>
             </div>
@@ -438,13 +543,13 @@
                 Ready to Elevate Your Photography?
             </h2>
             <p class="text-lg md:text-xl text-gray-200 mb-8 md:mb-10 leading-relaxed">
-                Explore our complete collection of professional photography gear and start creating stunning images today.
+                Explore our complete collection of professional photography gear and start creating stunning images today. From beginner-friendly equipment to professional-grade tools, we have everything you need.
             </p>
             <a 
                 href="https://pru.com" 
-                class="btn-primary inline-block bg-white text-gray-900 px-10 md:px-12 py-3 md:py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg"
+                class="cta-button relative inline-block bg-white text-gray-900 px-10 md:px-12 py-3 md:py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg"
             >
-                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+                <span class="relative z-10">Explore Collection <i class="fas fa-arrow-right ml-2"></i></span>
             </a>
         </div>
     </section>
@@ -461,72 +566,99 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-white rounded-xl p-8 md:p-6 border border-gray-200">
+                <div class="testimonial-card bg-white rounded-xl p-6 border border-gray-200">
                     <div class="flex items-center mb-4">
                         <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
                         </div>
+                        <span class="ml-2 text-sm font-semibold text-gray-600">5.0</span>
                     </div>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        "Exceptional service and amazing prices. The gear arrived in perfect condition and the free shipping was a huge bonus. Highly recommended!"
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                        "Exceptional service! The free shipping was a huge bonus, and my camera arrived in perfect condition. Highly recommended!"
                     </p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mr-3"></div>
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mr-3"></div>
                         <div>
-                            <p class="font-semibold text-gray-900">Sarah Johnson</p>
-                            <p class="text-sm text-gray-600">Professional Photographer</p>
+                            <p class="font-semibold text-gray-900 text-sm">Sarah Johnson</p>
+                            <p class="text-xs text-gray-600">Professional Photographer</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-white rounded-xl p-8 md:p-6 border border-gray-200">
+                <div class="testimonial-card bg-white rounded-xl p-6 border border-gray-200">
                     <div class="flex items-center mb-4">
                         <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
                         </div>
+                        <span class="ml-2 text-sm font-semibold text-gray-600">5.0</span>
                     </div>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        "Best online photography store I've found. The rewards program is fantastic and the customer service team is incredibly helpful."
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                        "Best online photography store I've found. The rewards program is fantastic and I've already saved $200 on my next purchase with accumulated points. Customer service is incredible too!"
                     </p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full mr-3"></div>
+                        <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full mr-3"></div>
                         <div>
-                            <p class="font-semibold text-gray-900">Michael Chen</p>
-                            <p class="text-sm text-gray-600">Photography Enthusiast</p>
+                            <p class="font-semibold text-gray-900 text-sm">Michael Chen</p>
+                            <p class="text-xs text-gray-600">Photography Enthusiast</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-white rounded-xl p-8 md:p-6 border border-gray-200">
+                <div class="testimonial-card bg-white rounded-xl p-6 border border-gray-200">
                     <div class="flex items-center mb-4">
                         <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
                         </div>
+                        <span class="ml-2 text-sm font-semibold text-gray-600">5.0</span>
                     </div>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        "I've ordered multiple times and every experience has been smooth. The 5-day delivery is reliable and the product quality is outstanding."
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                        "I've ordered multiple times and every experience has been smooth. The 5-day delivery is reliable and the product quality is outstanding. The 30-day return policy gave me peace of mind."
                     </p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mr-3"></div>
+                        <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mr-3"></div>
                         <div>
-                            <p class="font-semibold text-gray-900">Emma Rodriguez</p>
-                            <p class="text-sm text-gray-600">Studio Owner</p>
+                            <p class="font-semibold text-gray-900 text-sm">Emma Rodriguez</p>
+                            <p class="text-xs text-gray-600">Studio Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white rounded-xl p-6 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                            <i class="fas fa-star text-sm"></i>
+                        </div>
+                        <span class="ml-2 text-sm font-semibold text-gray-600">5.0</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                        "As a beginner photographer, I appreciated the competitive pricing and helpful product descriptions. Saved me hundreds compared to other stores!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full mr-3"></div>
+                        <div>
+                            <p class="font-semibold text-gray-900 text-sm">David Thompson</p>
+                            <p class="text-xs text-gray-600">Hobbyist Photographer</p>
                         </div>
                     </div>
                 </div>
@@ -534,8 +666,35 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about-us" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16 slide-in-left">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">
+                    About Photography For You
+                </h2>
+            </div>
+
+            <div class="space-y-8">
+                <!-- First Paragraph: Company History -->
+                <div class="fade-in">
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Photography For You was founded in 2015 by a group of passionate photographers who saw a gap in the market for affordable, quality photography equipment. What started as a small online store has grown into a trusted destination for photographers worldwide. Our founders believed that everyone deserves access to professional-grade gear without breaking the bank, and that philosophy continues to guide every decision we make today. Over the years, we've built relationships with top manufacturers, allowing us to offer exclusive deals and the latest equipment to our customers.
+                    </p>
+                </div>
+
+                <!-- Second Paragraph: Company Mission and Values -->
+                <div class="fade-in">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Our mission is to empower photographers of all levels—from hobbyists to professionals—by providing access to high-quality gear at competitive prices. We believe in transparency, exceptional customer service, and building a community of photography enthusiasts. We stand behind every product we sell with our 100% satisfaction guarantee, free returns, and dedicated support team. Our core values of integrity, innovation, and customer-centricity drive us to continuously improve our offerings and create an experience that goes beyond just selling products. At Photography For You, we're not just a store; we're your partner in capturing the world's most beautiful moments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
-    <section id="faq" class="py-16 md:py-24 bg-white">
+    <section id="faq" class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16 slide-in-left">
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">
@@ -548,86 +707,69 @@
 
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
                     <button 
-                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300 text-left"
+                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 text-left"
                         onclick="toggleAccordion(this)"
                         aria-expanded="false"
                     >
                         <span class="text-lg md:text-xl font-semibold text-gray-900">What is your shipping timeframe?</span>
-                        <i class="fas fa-chevron-down text-gray-600"></i>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
                     </button>
                     <div class="accordion-content bg-gray-50">
                         <div class="px-6 md:px-8 py-4 md:py-5 text-gray-600 leading-relaxed">
-                            We offer fast worldwide shipping with a standard delivery time of 5 business days. All orders qualify for free shipping, and we provide tracking information so you can monitor your package every step of the way.
+                            We offer fast worldwide shipping with a standard delivery time of 5 business days. All orders qualify for free shipping, and we provide tracking information so you can monitor your package every step of the way. For urgent orders, we also offer expedited shipping options at checkout. Once your order ships, you'll receive a tracking number via email that you can use to follow your package in real-time.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
                     <button 
-                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300 text-left"
+                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 text-left"
                         onclick="toggleAccordion(this)"
                         aria-expanded="false"
                     >
                         <span class="text-lg md:text-xl font-semibold text-gray-900">What is your return policy?</span>
-                        <i class="fas fa-chevron-down text-gray-600"></i>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
                     </button>
                     <div class="accordion-content bg-gray-50">
                         <div class="px-6 md:px-8 py-4 md:py-5 text-gray-600 leading-relaxed">
-                            We stand behind every product we sell. If you're not completely satisfied, you have 30 days to return your purchase for a full refund. We even cover the return shipping cost. Your satisfaction is our guarantee.
+                            We stand behind every product we sell. If you're not completely satisfied, you have 30 days to return your purchase for a full refund. We even cover the return shipping cost. Your satisfaction is our guarantee. Simply contact our support team to initiate a return, and we'll provide you with a prepaid shipping label. Once we receive your returned item in its original condition, we'll process your refund within 5-7 business days.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
                     <button 
-                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300 text-left"
+                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 text-left"
                         onclick="toggleAccordion(this)"
                         aria-expanded="false"
                     >
                         <span class="text-lg md:text-xl font-semibold text-gray-900">How does the rewards program work?</span>
-                        <i class="fas fa-chevron-down text-gray-600"></i>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
                     </button>
                     <div class="accordion-content bg-gray-50">
                         <div class="px-6 md:px-8 py-4 md:py-5 text-gray-600 leading-relaxed">
-                            Every dollar you spend earns you 1 reward point. Accumulate points and redeem them for discounts, exclusive products, and special perks. Members also get early access to new gear releases and exclusive member-only deals.
+                            Every dollar you spend earns you 1 reward point. Accumulate points and redeem them for discounts, exclusive products, and special perks. Members also get early access to new gear releases and exclusive member-only deals. You can check your points balance anytime in your account dashboard. Points never expire, so you can accumulate them and redeem them whenever you're ready. Plus, members receive bonus points on their birthday and during special promotional events throughout the year.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
                     <button 
-                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300 text-left"
+                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 text-left"
                         onclick="toggleAccordion(this)"
                         aria-expanded="false"
                     >
                         <span class="text-lg md:text-xl font-semibold text-gray-900">Do you offer warranty on products?</span>
-                        <i class="fas fa-chevron-down text-gray-600"></i>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
                     </button>
                     <div class="accordion-content bg-gray-50">
                         <div class="px-6 md:px-8 py-4 md:py-5 text-gray-600 leading-relaxed">
-                            All products come with manufacturer warranties. We also provide extended warranty options for additional peace of mind. Contact our support team for specific warranty information on your purchase.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 5 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button 
-                        class="accordion-button w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-300 text-left"
-                        onclick="toggleAccordion(this)"
-                        aria-expanded="false"
-                    >
-                        <span class="text-lg md:text-xl font-semibold text-gray-900">Can I track my order?</span>
-                        <i class="fas fa-chevron-down text-gray-600"></i>
-                    </button>
-                    <div class="accordion-content bg-gray-50">
-                        <div class="px-6 md:px-8 py-4 md:py-5 text-gray-600 leading-relaxed">
-                            Yes! You'll receive a tracking number via email immediately after your order ships. You can use this number to track your package in real-time and get updates on its delivery status.
+                            All products come with manufacturer warranties. We also provide extended warranty options for additional peace of mind on high-value items. Contact our support team for specific warranty information on your purchase. Most cameras and lenses come with a 1-year manufacturer warranty covering defects in materials and workmanship. We can help you register your products and explain all warranty coverage details. Extended warranties can be added at purchase or within 30 days of delivery for most items.
                         </div>
                     </div>
                 </div>
@@ -636,7 +778,7 @@
     </section>
 
     <!-- Policies Section -->
-    <section class="py-16 md:py-24 bg-gray-50">
+    <section class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16 slide-in-left">
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">
@@ -649,7 +791,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6">
                 <!-- Shipping Policy -->
-                <div class="bg-white rounded-xl p-8 md:p-6 border border-gray-200 hover:border-gray-300 transition-colors duration-300">
+                <div class="feature-card bg-white rounded-xl p-8 md:p-6 border border-gray-200">
                     <div class="mb-4 text-3xl text-gray-900">
                         <i class="fas fa-shipping-fast"></i>
                     </div>
@@ -663,7 +805,7 @@
                 </div>
 
                 <!-- Returns Policy -->
-                <div class="bg-white rounded-xl p-8 md:p-6 border border-gray-200 hover:border-gray-300 transition-colors duration-300">
+                <div class="feature-card bg-white rounded-xl p-8 md:p-6 border border-gray-200">
                     <div class="mb-4 text-3xl text-gray-900">
                         <i class="fas fa-undo"></i>
                     </div>
@@ -693,7 +835,7 @@
                 <input 
                     type="email" 
                     placeholder="Enter your email" 
-                    class="flex-1 px-6 py-3 rounded-lg outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
+                    class="flex-1 px-6 py-3 rounded-lg outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-300"
                     required
                     aria-label="Email for newsletter"
                 >
@@ -717,10 +859,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 mb-12">
                 <!-- Brand -->
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
+                    <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition-opacity duration-300">
                         <i class="fas fa-camera text-2xl text-white"></i>
                         <span class="text-xl font-bold text-white">Photography</span>
-                    </div>
+                    </a>
                     <p class="text-gray-400 leading-relaxed">
                         Your premier destination for professional photography gear and equipment.
                     </p>
@@ -731,16 +873,16 @@
                     <h4 class="text-white font-bold text-lg mb-4">Quick Links</h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Shop</a>
+                            <a href="#features" class="footer-link text-gray-400 hover:text-white transition-colors duration-300">Shop</a>
                         </li>
                         <li>
-                            <a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a>
+                            <a href="#benefits" class="footer-link text-gray-400 hover:text-white transition-colors duration-300">About Us</a>
                         </li>
                         <li>
-                            <a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a>
+                            <a href="#faq" class="footer-link text-gray-400 hover:text-white transition-colors duration-300">FAQ</a>
                         </li>
                         <li>
-                            <a href="https://pru.com/blog" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a>
+                            <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d/blog.html" class="footer-link text-gray-400 hover:text-white transition-colors duration-300">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -750,19 +892,19 @@
                     <h4 class="text-white font-bold text-lg mb-4">Support</h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="mailto:admin@pru.com" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                            <a href="mailto:admin@pru.com" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
                                 <i class="fas fa-envelope mr-2"></i>
                                 admin@pru.com
                             </a>
                         </li>
                         <li>
-                            <a href="https://pru.com/privacy" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                            <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d/privacy.html" class="footer-link text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="https://pru.com/terms" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                            <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d/terms.html" class="footer-link text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
                         </li>
                         <li>
-                            <a href="https://pru.com/contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a>
+                            <a href="https://pru.com/contact" class="footer-link text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -773,28 +915,28 @@
                     <div class="flex space-x-4">
                         <a 
                             href="https://facebook.com" 
-                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
+                            class="social-icon w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
                             aria-label="Facebook"
                         >
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a 
                             href="https://instagram.com" 
-                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
+                            class="social-icon w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
                             aria-label="Instagram"
                         >
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a 
                             href="https://twitter.com" 
-                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
+                            class="social-icon w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
                             aria-label="Twitter"
                         >
                             <i class="fab fa-twitter"></i>
                         </a>
                         <a 
                             href="https://youtube.com" 
-                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
+                            class="social-icon w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
                             aria-label="YouTube"
                         >
                             <i class="fab fa-youtube"></i>
@@ -809,13 +951,13 @@
                     &copy; 2024 Photography For You. All rights reserved.
                 </p>
                 <div class="flex gap-6">
-                    <a href="https://pru.com/privacy" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+                    <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d/privacy.html" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 text-sm">
                         Privacy Policy
                     </a>
-                    <a href="https://pru.com/terms" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+                    <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d/terms.html" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 text-sm">
                         Terms of Service
                     </a>
-                    <a href="https://pru.com/cookies" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+                    <a href="https://pru.com/cookies" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 text-sm">
                         Cookie Policy
                     </a>
                 </div>
@@ -825,23 +967,39 @@
 
     <!-- Scripts -->
     <script>
-        // Toggle Mobile Menu
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobileMenu').classList.add('hidden');
-            });
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
         });
 
         // Accordion Toggle
         function toggleAccordion(button) {
             const content = button.nextElementSibling;
             const isActive = content.classList.contains('active');
+            const chevron = button.querySelector('i');
             
             // Close all other accordions
             document.querySelectorAll('.accordion-content.active').forEach(item => {
@@ -849,6 +1007,10 @@
                     item.classList.remove('active');
                     item.previousElementSibling.classList.remove('active');
                     item.previousElementSibling.setAttribute('aria-expanded', 'false');
+                    const otherChevron = item.previousElementSibling.querySelector('i');
+                    if (otherChevron) {
+                        otherChevron.style.transform = 'rotate(0deg)';
+                    }
                 }
             });
             
@@ -856,6 +1018,10 @@
             content.classList.toggle('active');
             button.classList.toggle('active');
             button.setAttribute('aria-expanded', !isActive);
+            
+            if (chevron) {
+                chevron.style.transform = isActive ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
         }
 
         // Newsletter Submit
@@ -918,5 +1084,6 @@
             observer.observe(section);
         });
     </script>
+</body>
 </body>
 </html>
