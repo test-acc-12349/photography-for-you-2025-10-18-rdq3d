@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master the art of composition in photography with expert tips and techniques. Learn how to create visually stunning images using proven compositional principles.">
+    <meta name="keywords" content="photography composition, photography tips, visual composition, framing techniques, photography guide">
+    <meta name="author" content="Photography For You">
+    <meta property="og:title" content="Master Photography Composition: Complete Guide to Visual Excellence">
+    <meta property="og:description" content="Learn professional photography composition techniques to elevate your visual storytelling and create stunning images.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pru.com">
+    <title>Master Photography Composition: Complete Guide to Visual Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.6s ease-in-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.6s ease-in-out;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .accordion-button {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .accordion-button.active {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn-secondary:hover {
+            transform: scale(1.05);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .announcement-bar {
+            background: linear-gradient(90deg, #1f2937 0%, #374151 100%);
+            color: white;
+        }
+        
+        .search-input {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .search-input:focus {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-content {
+            line-height: 1.8;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+        }
+        
+        .blog-content h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .blog-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+        
+        .blog-content strong {
+            font-weight: 600;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar py-3 px-4 md:px-6 text-center text-sm md:text-base font-medium">
+        <i class="fas fa-truck mr-2"></i>Free shipping on orders over $50 | Fast Worldwide Shipping (5 days delivery)
+    </div>
+
+    <!-- Header -->
+    <header class="sticky-header">
+        <nav class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center justify-between w-full">
+                <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d" class="flex items-center space-x-2">
+                    <i class="fas fa-camera text-2xl text-gray-900"></i>
+                    <span class="text-xl md:text-2xl font-bold text-gray-900">Photography</span>
+                </a>
+                <a href="https://test-acc-12349.github.io/photography-for-you-2025-10-18-rdq3d/blog.html" class="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium">
+                    ← Back
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Post Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <article class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <!-- Blog Header -->
+            <div class="mb-12 fade-in">
+                <div class="mb-6">
+                    <span class="inline-block bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">Photography Guide</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+                    Master Photography Composition: Complete Guide to Visual Excellence
+                </h1>
+                <div class="flex items-center text-gray-600 space-x-4 mb-8">
+                    <span class="flex items-center"><i class="fas fa-calendar mr-2"></i>January 2024</span>
+                    <span class="flex items-center"><i class="fas fa-clock mr-2"></i>12 min read</span>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <img 
+                src="https://images.unsplash.com/photo-1516035069371-29ad0afe3f3d?w=1200&h=675&fit=crop&q=80" 
+                alt="Professional photographer composing a landscape photograph using compositional techniques"
+                class="w-full h-auto rounded-lg shadow-lg mb-12 object-cover"
+            >
+
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <p>
+                    Photography is often described as the art of capturing light, but the true magic lies in how you arrange that light within your frame. <strong>Composition is the foundation of compelling photography</strong>—it's the difference between a snapshot and a stunning image that captivates viewers and tells a powerful visual story. Whether you're a beginner picking up a camera for the first time or an experienced photographer looking to refine your skills, mastering composition will dramatically elevate the quality of your work.
+                </p>
+
+                <p>
+                    In this comprehensive guide, we'll explore the fundamental principles of photographic composition, proven techniques used by professional photographers, and practical strategies you can implement immediately to transform your images. By understanding and applying these compositional rules, you'll develop a visual eye that naturally recognizes compelling frames and creates photographs that resonate with viewers.
+                </p>
+
+                <h2>Understanding the Rule of Thirds</h2>
+
+                <p>
+                    The Rule of Thirds is perhaps the most fundamental compositional principle in photography. This classic technique involves dividing your frame into nine equal parts using two equally-spaced horizontal lines and two equally-spaced vertical lines, creating a grid pattern. Rather than placing your subject in the center of the frame, the Rule of Thirds suggests positioning key elements along these gridlines or at their intersections.
+                </p>
+
+                <p>
+                    This approach creates more dynamic and visually interesting compositions compared to centered subjects. When you place your subject off-center, you create tension and movement within the frame, encouraging the viewer's eye to travel through the image rather than immediately fixing on a single point. Most modern cameras and smartphones include an on-screen grid overlay that displays these third lines, making it easy to practice this technique.
+                </p>
+
+                <p>
+                    The intersections of these lines—particularly the four points where horizontal and vertical lines cross—are especially powerful positions for placing your subject's eyes or the main focal point of your composition. This creates an immediate visual hierarchy that guides the viewer's attention exactly where you want it.
+                </p>
+
+                <h2>Leading Lines: Guiding the Viewer's Eye</h2>
+
+                <p>
+                    Leading lines are compositional elements that naturally draw the viewer's eye through your photograph toward your main subject. These lines can be roads, rivers, fences, shadows, or any linear element in your scene. When strategically positioned, leading lines create a sense of depth and dimension while guiding the viewer on a visual journey through your image.
+                </p>
+
+                <p>
+                    The power of leading lines lies in their psychological effect on viewers. Our eyes naturally follow lines, so by incorporating them into your composition, you're essentially creating a roadmap for how viewers will experience your photograph. Converging lines that meet at a point create particularly strong compositions, as they naturally lead the eye toward the vanishing point where your subject or focal point should be positioned.
+                </p>
+
+                <p>
+                    Look for leading lines in your environment: railroad tracks disappearing into the distance, a winding path through a forest, architectural elements in urban settings, or even the natural lines created by water reflections. Positioning these lines strategically within your frame—often using them to connect the foreground to your subject in the background—creates compositional depth and visual interest that elevates your photography.
+                </p>
+
+                <h2>Framing: Creating Context and Depth</h2>
+
+                <p>
+                    Framing is a sophisticated compositional technique that uses elements in your scene to create a frame within your photograph. This might involve photographing your subject through a doorway, window, tree branches, or architectural elements. This technique accomplishes multiple compositional goals simultaneously: it draws attention to your subject, creates depth by establishing foreground and background layers, and provides context that enhances the visual story.
+                </p>
+
+                <p>
+                    When you use natural or architectural frames, you're creating visual layers that make your photograph more three-dimensional and engaging. The frame acts as a guide that isolates your subject from the surrounding environment, making it stand out more prominently. Additionally, the frame provides context and storytelling elements that enhance the overall impact of your image.
+                </p>
+
+                <p>
+                    Look for framing opportunities in everyday scenes: windows and doorways in buildings, tree branches overhead, rock formations, or architectural elements. The frame doesn't need to be perfect or complete—even partial framing creates compositional interest and draws the viewer's eye toward your subject.
+                </p>
+
+                <h2>Symmetry and Patterns: Visual Harmony</h2>
+
+                <p>
+                    While asymmetrical compositions often create more dynamic images, symmetry and patterns offer a different type of visual power. Symmetrical compositions create a sense of balance, harmony, and stability that can be incredibly effective for certain subjects and moods. Patterns—whether natural or man-made—create visual rhythm that engages the viewer's eye and creates satisfying compositions.
+                </p>
+
+                <p>
+                    Symmetrical compositions work particularly well for architectural photography, reflections in water, and subjects with inherent balance. The mirror-like quality of symmetrical images creates a sense of perfection and order that appeals to viewers on a fundamental level. However, breaking symmetry with a single element—a bird flying through a symmetrical sky, for example—can create even more compelling compositions by adding an unexpected element.
+                </p>
+
+                <p>
+                    Patterns, whether repetitive architectural elements, rows of crops, or natural formations, create visual rhythm that guides the viewer's eye through the frame. Patterns can be broken or disrupted by introducing a contrasting element, which creates compositional tension and interest.
+                </p>
+
+                <h2>Depth and Layering: Creating Three-Dimensional Images</h2>
+
+                <p>
+                    Photography is inherently a two-dimensional medium, yet skilled photographers create the illusion of depth and three-dimensionality through careful composition. Creating depth in your images makes them more immersive and engaging. Several techniques accomplish this:
+                </p>
+
+                <ul>
+                    <li><strong>Foreground, middle ground, and background:</strong> Include distinct elements at different distances from the camera to create layered depth</li>
+                    <li><strong>Perspective lines:</strong> Use converging lines to create the illusion of receding depth</li>
+                    <li><strong>Atmospheric perspective:</strong> Understand how distance affects clarity and color saturation</li>
+                    <li><strong>Overlapping elements:</strong> Place objects in front of each other to establish spatial relationships</li>
+                    <li><strong>Scale and relative size:</strong> Use familiar objects to establish distance and proportion</li>
+                </ul>
+
+                <p>
+                    When you include a compelling foreground element, a clear subject in the middle ground, and interesting background elements, you create a photograph that viewers can explore. This layered approach is particularly effective in landscape photography, where it transforms a flat scene into a visually engaging composition with obvious depth.
+                </p>
+
+                <h2>Color and Contrast: Visual Impact</h2>
+
+                <p>
+                    Color is one of the most powerful compositional tools available to photographers. The colors in your scene influence mood, draw attention, and create visual harmony or tension. Understanding color theory helps you compose more effective photographs.
+                </p>
+
+                <p>
+                    Complementary colors—colors opposite each other on the color wheel—create vibrant, energetic compositions. A subject in a warm color against a cool-colored background immediately stands out and creates visual impact. Analogous colors—colors adjacent on the color wheel—create harmonious, peaceful compositions that feel cohesive.
+                </p>
+
+                <p>
+                    Contrast also plays a crucial role in composition. High contrast between your subject and background makes the subject pop and draws the viewer's eye immediately. This can be contrast in brightness, color, texture, or all three. Conversely, low-contrast compositions create a more subtle, contemplative mood.
+                </p>
+
+                <h2>Negative Space: The Power of Emptiness</h2>
+
+                <p>
+                    Beginning photographers often feel compelled to fill their frame with as much visual information as possible. However, negative space—the empty or uncluttered areas surrounding your subject—is a powerful compositional tool. Strategic use of negative space creates breathing room, emphasizes your subject, and creates a sense of scale and isolation.
+                </p>
+
+                <p>
+                    Negative space is particularly effective in portrait and wildlife photography, where it isolates your subject and prevents visual clutter from distracting the viewer. A subject positioned in one corner with expansive negative space in the rest of the frame creates a powerful compositional statement. The viewer's eye naturally gravitates toward the subject because it's the only element competing for attention.
+                </p>
+
+                <p>
+                    Don't be afraid of empty space in your compositions. Sometimes what you leave out of the frame is as important as what you include.
+                </p>
+
+                <h2>Perspective and Angles: Fresh Viewpoints</h2>
+
+                <p>
+                    The perspective from which you photograph your subject dramatically influences the composition and impact of your image. Most photographers shoot from eye level—a predictable and often uninspiring perspective. Experimenting with different angles and perspectives creates more compelling compositions.
+                </p>
+
+                <p>
+                    Shooting from a low angle looking upward creates a sense of grandeur and power, making subjects appear larger and more imposing. This perspective works particularly well for architectural photography and portraits where you want to convey strength or dominance. Conversely, shooting from a high angle looking downward creates a sense of diminishment and can emphasize patterns or spatial relationships.
+                </p>
+
+                <p>
+                    Getting close to your subject and shooting at an unusual angle often creates more interesting compositions than standing back and photographing from a conventional perspective. Challenge yourself to find fresh viewpoints and angles that reveal your subject in new and compelling ways.
+                </p>
+
+                <h2>Practical Tips for Improving Your Composition</h2>
+
+                <p>
+                    Understanding compositional principles is one thing; applying them consistently is another. Here are practical strategies for improving your compositional skills:
+                </p>
+
+                <ul>
+                    <li><strong>Study great photography:</strong> Analyze photographs you admire and identify the compositional techniques used</li>
+                    <li><strong>Practice intentionally:</strong> Spend time deliberately practicing specific compositional techniques</li>
+                    <li><strong>Shoot more:</strong> The more you photograph, the more intuitive compositional decisions become</li>
+                    <li><strong>Break the rules:</strong> Once you understand compositional rules, experiment with breaking them for creative effect</li>
+                    <li><strong>Get feedback:</strong> Share your work with other photographers and listen to their perspective</li>
+                    <li><strong>Review your work:</strong> Regularly critique your own photographs to identify compositional patterns and growth areas</li>
+                    <li><strong>Experiment with different genres:</strong> Each photography genre has unique compositional challenges and opportunities</li>
+                </ul>
+
+                <h2>Conclusion: Developing Your Visual Eye</h2>
+
+                <p>
+                    Mastering photography composition is a journey, not a destination. These fundamental principles provide a framework for creating visually compelling images, but photography is also an art form that rewards experimentation, creativity, and personal expression. As you develop your skills, these rules will become intuitive, allowing you to compose photographs instinctively.
+                </p>
+
+                <p>
+                    Start by consciously applying one or two compositional techniques to your photography. As these become natural, add additional techniques to your toolkit. Over time, you'll develop a visual eye that automatically recognizes compelling compositions and the potential within scenes others might overlook. With practice and dedication, you'll transform from someone who simply points a camera at a subject to a photographer who deliberately composes images that captivate and inspire viewers.
+                </p>
+
+                <p>
+                    Remember that the best camera is the one you have with you, and the best composition is the one that tells your visual story most effectively. Whether you're using a professional DSLR or a smartphone, these compositional principles apply universally. Invest in understanding and mastering composition, and you'll see immediate improvements in the quality and impact of your photography.
+                </p>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-16 pt-12 border-t border-gray-200">
+                <div class="bg-gray-50 rounded-xl p-8 md:p-10 text-center">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Elevate Your Photography?</h3>
+                    <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+                        Explore our complete collection of professional photography gear and equipment to bring your compositional vision to life.
+                    </p>
+                    <a 
+                        href="https://pru.com" 
+                        class="btn-primary inline-block bg-gray-900 text-white px-8 md:px-10 py-3 md:py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300"
+                    >
+                        Shop Photography Gear <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Related Articles Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16 slide-in-left">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">
+                    Related Articles
+                </h2>
+                <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+                    Explore more photography tips and techniques
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+                <!-- Article Card 1 -->
+                <div class="feature-card bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-gray-300">
+                    <img 
+                        src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=250&fit=crop&q=80" 
+                        alt="Lighting techniques in photography"
+                        class="w-full h-48 object-cover"
+                    >
+                    <div class="p-6">
+                        <span class="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">Photography Tips</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Mastering Lighting: Essential Techniques for Professional Results</h3>
+                        <p class="text-gray-600 mb-4">Learn how to control and manipulate light to create stunning photographs in any condition.</p>
+                        <a href="#" class="text-gray-900 font-semibold hover:text-gray-700 transition-colors duration-300">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 2 -->
+                <div class="feature-card bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-gray-300">
+                    <img 
+                        src="https://images.unsplash.com/photo-1606986628253-05620e9b0a80?w=400&h=250&fit=crop&q=80" 
+                        alt="Portrait photography techniques"
+                        class="w-full h-48 object-cover"
+                    >
+                    <div class="p-6">
+                        <span class="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">Portrait Photography</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">The Art of Portrait Photography: Creating Connection Through the Lens</h3>
+                        <p class="text-gray-600 mb-4">Discover techniques for capturing authentic emotions and creating compelling portrait photographs.</p>
+                        <a href="#" class="text-gray-900 font-semibold hover:text-gray-700 transition-colors duration-300">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 3 -->
+                <div class="feature-card bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-gray-300">
+                    <img 
+                        src="https://images.unsplash.com/photo-1506434304759-4b5c5c0e3a3f?w=400&h=250&fit=crop&q=80" 
+                        alt="Landscape photography guide"
+                        class="w-full h-48 object-cover"
+                    >
+                    <div class="p-6">
+                        <span class="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">Landscape Photography</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Landscape Photography Mastery: Capturing Nature's Grandeur</h3>
+                        <p class="text-gray-600 mb-4">Explore advanced techniques for photographing landscapes and creating breathtaking nature images.</p>
+                        <a href="#" class="text-gray-900 font-semibold hover:text-gray-700 transition-colors duration-300">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight tracking-tight">
+                Stay Updated
+            </h2>
+            <p class="text-gray-300 text-lg md:text-xl mb-8">
+                Subscribe to our newsletter for exclusive photography tips, gear reviews, and techniques
+            </p>
+            
+            <form class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto" onsubmit="handleNewsletterSubmit(event)">
+                <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    class="flex-1 px-6 py-3 rounded-lg outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
+                    required
+                    aria-label="Email for newsletter"
+                >
+                <button 
+                    type="submit"
+                    class="btn-primary bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap"
+                >
+                    Subscribe <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </form>
+            <p class="text-gray-400 text-sm mt-4">
+                We respect your privacy. Unsubscribe at any time.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-camera text-2xl text-white"></i>
+                        <span class="text-xl font-bold text-white">Photography</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Your premier destination for professional photography gear and equipment.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://pru.com/blog" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Support</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="mailto:admin@pru.com" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <i class="fas fa-envelope mr-2"></i>
+                                admin@pru.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pru.com/privacy" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="https://pru.com/terms" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="https://pru.com/contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a 
+                            href="https://facebook.com" 
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
+                            aria-label="Facebook"
+                        >
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a 
+                            href="https://instagram.com" 
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
+                            aria-label="Instagram"
+                        >
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a 
+                            href="https://twitter.com" 
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
+                            aria-label="Twitter"
+                        >
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a 
+                            href="https://youtube.com" 
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 transition-all duration-300"
+                            aria-label="YouTube"
+                        >
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-400 text-center md:text-left">
+                    &copy; 2024 Photography For You. All rights reserved.
+                </p>
+                <div class="flex gap-6">
+                    <a href="https://pru.com/privacy" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+                        Privacy Policy
+                    </a>
+                    <a href="https://pru.com/terms" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+                        Terms of Service
+                    </a>
+                    <a href="https://pru.com/cookies" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+                        Cookie Policy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Accordion Toggle
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isActive = content.classList.contains('active');
+            
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content.active').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.classList.remove('active');
+                    item.previousElementSibling.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Toggle current accordion
+            content.classList.toggle('active');
+            button.classList.toggle('active');
+            button.setAttribute('aria-expanded', !isActive);
+        }
+
+        // Newsletter Submit
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // Show success message
+            const button = event.target.querySelector('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check mr-2"></i>Subscribed!';
+            button.disabled = true;
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.disabled = false;
+                event.target.reset();
+            }, 3000);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
